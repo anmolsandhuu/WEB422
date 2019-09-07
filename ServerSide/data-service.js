@@ -45,7 +45,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getAllEmployeesRaw: function () {
             return new Promise(function (resolve, reject) {
@@ -59,7 +59,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getEmployeeById: function (employeeId) {
             return new Promise(function (resolve, reject) {
@@ -76,7 +76,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getEmployeeByIdRaw: function (employeeId) {
             return new Promise(function (resolve, reject) {
@@ -92,7 +92,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         updateEmployeeById: function (employeeId, employeeData) {
             return new Promise(function (resolve, reject) {
@@ -144,7 +144,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getPositionById: function (positionId) {
             return new Promise(function (resolve, reject) {
@@ -160,7 +160,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         updatePositionById: function (positionId, positionData) {
             return new Promise(function (resolve, reject) {
@@ -212,7 +212,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getProjectById: function (projectId) {
             return new Promise(function (resolve, reject) {
@@ -228,7 +228,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         updateProjectById: function (projectId, projectData) {
             return new Promise(function (resolve, reject) {
@@ -297,7 +297,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getAllTeamsRaw: function () {
             return new Promise(function (resolve, reject) {
@@ -311,7 +311,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getTeamById: function (teamId) {
             return new Promise(function (resolve, reject) {
@@ -344,7 +344,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         getTeamByIdRaw: function (teamId) {
             return new Promise(function (resolve, reject) {
@@ -359,7 +359,7 @@ module.exports = function (mongoDBConnectionString) {
                     .catch((err) => {
                         reject(err);
                     });
-            })
+            });
         },
         updateTeamById: function (teamId, teamData) {
             return new Promise(function (resolve, reject) {
@@ -399,6 +399,6 @@ module.exports = function (mongoDBConnectionString) {
                 });
             });
         },
-    }
+    };
 
-}
+};

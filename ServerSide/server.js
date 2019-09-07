@@ -1,4 +1,4 @@
-const mongoDBConnectionString = "mongodb://anmol:sandhu1766@senecaweb-shard-00-00-s1lln.mongodb.net:27017,senecaweb-shard-00-01-s1lln.mongodb.net:27017,senecaweb-shard-00-02-s1lln.mongodb.net:27017/teams-api-data?ssl=true&replicaSet=SenecaWeb-shard-0&authSource=admin&retryWrites=true"
+const mongoDBConnectionString = "mongodb://anmol:sandhu1766@senecaweb-shard-00-00-s1lln.mongodb.net:27017,senecaweb-shard-00-01-s1lln.mongodb.net:27017,senecaweb-shard-00-02-s1lln.mongodb.net:27017/teams-api-data?ssl=true&replicaSet=SenecaWeb-shard-0&authSource=admin&retryWrites=true";
 const HTTP_PORT = process.env.PORT || 8081;
 
 const express = require("express");
@@ -21,7 +21,7 @@ app.get("/employees", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/employees-raw", (req, res) => {
@@ -30,7 +30,7 @@ app.get("/employees-raw", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/employee/:employeeId", (req, res) => {
@@ -43,7 +43,7 @@ app.get("/employee/:employeeId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/employee-raw/:employeeId", (req, res) => {
@@ -56,7 +56,7 @@ app.get("/employee-raw/:employeeId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.put("/employee/:employeeId", (req, res) => {
@@ -68,7 +68,7 @@ app.put("/employee/:employeeId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.post("/employees", (req, res) => {
@@ -80,7 +80,7 @@ app.post("/employees", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 ////////////////////
@@ -93,7 +93,7 @@ app.get("/positions", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/position/:positionId", (req, res) => {
@@ -106,7 +106,7 @@ app.get("/position/:positionId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.put("/position/:positionId", (req, res) => {
@@ -117,7 +117,7 @@ app.put("/position/:positionId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.post("/positions", (req, res) => {
@@ -129,7 +129,7 @@ app.post("/positions", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 ////////////////////
@@ -142,7 +142,7 @@ app.get("/projects", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/project/:projectId", (req, res) => {
@@ -155,7 +155,7 @@ app.get("/project/:projectId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.put("/project/:projectId", (req, res) => {
@@ -166,7 +166,7 @@ app.put("/project/:projectId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.post("/projects", (req, res) => {
@@ -178,7 +178,7 @@ app.post("/projects", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 ////////////////////
@@ -191,7 +191,7 @@ app.get("/teams", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/teams-raw", (req, res) => {
@@ -200,7 +200,7 @@ app.get("/teams-raw", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/team/:teamId", (req, res) => {
@@ -213,7 +213,7 @@ app.get("/team/:teamId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.get("/team-raw/:teamId", (req, res) => {
@@ -226,7 +226,7 @@ app.get("/team-raw/:teamId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.put("/team/:teamId", (req, res) => {
@@ -237,7 +237,7 @@ app.put("/team/:teamId", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 app.post("/teams", (req, res) => {
@@ -249,7 +249,7 @@ app.post("/teams", (req, res) => {
         })
         .catch((err) => {
             res.status(500).end();
-        })
+        });
 });
 
 ////////////////////
@@ -264,7 +264,7 @@ app.use((req, res) => {
 
 data.connect().then(() => {
         app.listen(HTTP_PORT, () => {
-            console.log("API listening on: " + HTTP_PORT)
+            console.log("API listening on: " + HTTP_PORT);
         });
     })
     .catch((err) => {
