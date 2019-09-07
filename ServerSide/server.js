@@ -268,6 +268,6 @@ data.connect().then(() => {
         });
     })
     .catch((err) => {
-        console.log("unable to start the server: " + err);
+        console.log("Unable to start the server: " + err);
         process.exit();
     });
